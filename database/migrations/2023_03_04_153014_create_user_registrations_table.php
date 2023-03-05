@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('user_registrations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('cpf');
+            $table->string('cpf')->unique();
             $table->datetime('birthdate');
             $table->string('email')->unique();
             $table->string('phone')->unique();
