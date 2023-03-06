@@ -1,11 +1,10 @@
 @extends('layouts.main')
 @section('title', 'Atualizar Cadastro')
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="text-center">view de atualição de cadastro</p>
-            </div>
-        </div>
-    </div>
+<div class="container">
+    <h1>Atualizar Dados</h1>
+    <form action="#" class="form">
+        @include('_partials.form')
+    </form>
+</div>
 @endsection

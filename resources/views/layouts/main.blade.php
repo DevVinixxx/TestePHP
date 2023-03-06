@@ -11,7 +11,7 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a href="{{Route('index')}}" class="text-decoration-none text-white btn btn-primary">Home</a>
+                    <a href="{{Route('index')}}" class="text-decoration-none text-white btn btn-primary">Inicio</a>
                     <a href="{{Route('create')}}" class="text-decoration-none text-white btn btn-primary">Cadastrar</a>
                 </div>
             </nav>
@@ -19,7 +19,7 @@
         @yield('content')
         <footer>
             <div class="fixed-bottom bg-dark text-center ">
-                <p class="text-white mt-3"><a href="https://www.instagram.com/ei_vinix/" target="_blank" class="text-white" style="text-decoration: none">Vinícius Peres</a> &copy 2023</p>
+                <p class="text-white mt-3"><a href="https://www.instagram.com/ei_vinix/" target="_blank" class="text-white text-decoration-none">Vinícius Peres</a> &copy 2023</p>
             </div>
         </footer>
     </body>

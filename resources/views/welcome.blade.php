@@ -5,7 +5,6 @@
     <div class="row">
         <div class="col-md-12">
             <p class="text-center">view de Usuarios cadastrados</p>
-            @include('_partials.form')
         </div>
     </div>
 </div>

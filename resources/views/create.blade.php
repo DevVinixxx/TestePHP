@@ -4,16 +4,9 @@
     
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            aa
-        </div>
-        <div class="col-md-4">
-            aa
-        </div>
-        <div class="col-md-4">
-            aa
-        </div>
-    </div>
+    <h1>Cadastrar Usuario</h1>
+    <form action="#" class="form">
+        @include('_partials.form')
+    </form>
 </div>
 @endsection

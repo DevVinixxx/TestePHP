@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('phone')->unique();
             $table->string('street');
             $table->string('neighborhood');
-            $table->string('nummber');
+            $table->string('number');
             $table->string('zip_code');
             $table->string('city');
             $table->string('state');
