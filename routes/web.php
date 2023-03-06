@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserRegistrationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [UserRegistrationController::class, 'index'])->name('index');
+
+Route::get('/create', [UserRegistrationController::class, 'create'])->name('create');
+
+Route::get('/update', [UserRegistrationController::class, 'update']);
