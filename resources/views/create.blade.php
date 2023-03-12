@@ -4,7 +4,7 @@
     
 @section('content')
 <div class="container">
-    <h1>Cadastrar Usuario</h1>
+    <h1>Cadastro de Usuario</h1>
     <form action="#" class="form">
         @include('_partials.form')
     </form>
