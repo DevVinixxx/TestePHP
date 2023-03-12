@@ -5,7 +5,8 @@
 @section('content')
 <div class="container">
     <h1>Cadastro de Usuario</h1>
-    <form action="#" class="form">
+    <form action="{{route('store')}}" method="post" class="form" >
+        @csrf
         @include('_partials.form')
     </form>
 </div>
