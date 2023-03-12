@@ -29,8 +29,8 @@
                     <input type="text" id="phone" name="phone" class="form-control" placeholder="18981760116">
                 </div>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Rua: </label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Alameda gugin">
+                    <label for="street" class="form-label">Rua: </label>
+                    <input type="text" id="street" name="street" class="form-control" placeholder="Alameda gugin">
                 </div>
                 <div class="mb-3">
                     <label for="neighborhood" class="form-label">Bairro: </label>
@@ -43,8 +43,8 @@
             </div>
             <div class="col-md-6 ">
                 <div class="mb-3">
-                    <label for="name" class="form-label">CEP: </label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="19063841">
+                    <label for="zip_code" class="form-label">CEP: </label>
+                    <input type="text" id="zip_code" name="zip_code" class="form-control" placeholder="19063811">
                 </div>
                 <div class="mb-3">
                     <label for="state" class="form-label">Selecione um state:</label>
@@ -82,7 +82,7 @@
                 <div class="mb-3">
                     <label for="city" class="form-label">Selecione uma cidade:</label>
                     <select id="city" name="city" class="form-control">
-                    //Aqui vem todas as cidades do estado selecionado
+                    //Aqui vem todas as cidades do estado
                     </select>
                 </div>
             </div>
@@ -92,10 +92,10 @@
 <button type="submit" class="btn btn-success mt-3">Submit</button>
 
 <script>
-    const estado = document.getElementById('state');
-    const cdd = document.getElementById('city');
+    const selecEstado = document.getElementById('state');
+    const selecCidade = document.getElementById('city');
   
-    estado.addEventListener('change', (event) => {
+    selecEstado.addEventListener('change', (event) => {
       const state = event.target.value;
   
       // faz uma requisição HTTP para a API do IBGE para obter as cidades do estado selecionado
@@ -103,16 +103,16 @@
         .then(response => response.json())
         .then(data => {
           // remove todas as opções de cidade existentes
-          while (cdd.firstChild) {
-            cdd.removeChild(cdd.firstChild);
+          while (selecCidade.firstChild) {
+            selecCidade.removeChild(selecCidade.firstChild);
           }
   
           // adiciona as novas opções de cidade com base na resposta da API
-          data.forEach(cidade => {
+          data.forEach(city => {
             const option = document.createElement('option');
-            option.value = cidade.nome;
-            option.text = cidade.nome;
-            cdd.appendChild(option);
+            option.value = city.nome;
+            option.text = city.nome;
+            selecCidade.appendChild(option);
           });
         })
         .catch(error => {
