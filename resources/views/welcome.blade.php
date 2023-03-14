@@ -11,18 +11,12 @@
                     <div class="row">
                         <div class="col-md-6">
                             <tr>
-                                <td>{{ $user->id }}</td>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
+                                <td>Nome: <strong>{{ $user->name }}</strong></td> <br>
+                                <td>Telefone: <strong>{{ $user->phone }}</strong></td>
                             </tr>
                         </div>
                         <div class="col-md-6">
-                        <a href="{{ route('show', $user->id) }}"><i class="btn btn-warning">X</i></a>
-                        <form action="{{ route('delete', $user->id) }}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">X</button>
-                        </form> 
+                            <a href="{{ route('details', $user->id) }}"><i class="btn btn-warning">Detalhes</i></a> 
                         </div> 
                     </div>
                 </div>

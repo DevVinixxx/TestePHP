@@ -20,7 +20,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="birthdate" class="form-label">Data de nascimento:</label>
-                            <input type="date" class="form-control" id="birthdate" name="birthdate" value="{{old($user->birthdate)}}">
+                            <input type="date" required class="form-control" id="birthdate" name="birthdate">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email: </label>

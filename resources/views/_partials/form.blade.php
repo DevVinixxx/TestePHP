@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-4">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body form-group">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nome: </label>
                     <input type="text" id="name" name="name" class="form-control" placeholder="Ex: Maria Almeida">
@@ -10,7 +10,7 @@
                     <label for="cpf" class="form-label">CPF: </label>
                     <input type="text" id="cpf" name="cpf" class="form-control" placeholder="123.123.123-23">
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 form-group">
                     <label for="birthdate" class="form-label">Data de nascimento: </label>
                     <input type="date" class="form-control" id="birthdate" name="birthdate">
                 </div>
@@ -23,7 +23,7 @@
     </div>
     <div class="col-md-8 card">
         <div class="row card-body">
-            <div class="col-md-6">
+            <div class="col-md-6 form-group">
                 <div class="mb-3">
                     <label for="phone" class="form-label">Telefone: </label>
                     <input type="text" id="phone" name="phone" class="form-control" placeholder="18981760116">
@@ -41,7 +41,7 @@
                     <input type="number" id="number" name="number" class="form-control" placeholder="423">
                 </div>
             </div>
-            <div class="col-md-6 ">
+            <div class="col-md-6 form-group">
                 <div class="mb-3">
                     <label for="zip_code" class="form-label">CEP: </label>
                     <input type="text" id="zip_code" name="zip_code" class="form-control" placeholder="19063811">
