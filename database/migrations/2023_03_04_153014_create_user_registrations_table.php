@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('cpf')->unique();
-            $table->datetime('birthdate');
+            $table->datetime('birthdate')->nullable();
             $table->string('email')->unique();
             $table->string('phone')->unique();
             $table->string('street');

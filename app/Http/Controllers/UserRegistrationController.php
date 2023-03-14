@@ -7,18 +7,21 @@ use Illuminate\Http\Request;
 
 class UserRegistrationController extends Controller
 {
-    public function index(){
+
+    public function index()
+    {
         $users = UserRegistration::orderBy('id')->paginate(5);
 
         return view('welcome', ['users'=>$users]);
     }
 
-    public function create(){
-        return view('create');
+    public function create()
+    {
+       return view('create');
     }
 
-    public function store(Request $request){
-
+    public function store(Request $request)
+    {
         $user = new UserRegistration;
         $user->name = $request->name;
         $user->cpf = $request->cpf;
@@ -37,11 +40,40 @@ class UserRegistrationController extends Controller
         return redirect()->route('index');
     }
 
-    public function update(){
-        return view('update');
+    public function show(string $id)
+    {
+        $user = UserRegistration::find($id);
+
+        return view('update', ['user'=>$user]);
     }
 
-    public function show(){
-        return view('datails');
+    public function edit(string $id)
+    {
+        $user = UserRegistration::findOrFail($id);
+
+        return view('update', ['user'=>$user]);
     }
+
+    public function update(Request $request, string $id)
+    {
+       UserRegistration::findOrFail($request->id)->update($request->all());
+
+       return redirect()->route('index');
+    }
+
+   
+    public function destroy(string $id)
+    {
+        UserRegistration::findOrFail($id)->delete();
+
+        return redirect()->route('index');
+    }
+
+    public function details($id)
+    {
+        $user = UserRegistration::find($id);
+
+        return view('datails', ['user'=>$user]);
+    }
+
 }

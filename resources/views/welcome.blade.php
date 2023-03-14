@@ -8,12 +8,23 @@
             <div class="card">
                 @foreach ($users as $user)
                 <div class="card-body">
-                    <tr>
-                        <td>{{ $user->id }}</td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                    </tr>
-                    <i class="btn btn-danger text-right">X</i>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <tr>
+                                <td>{{ $user->id }}</td>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
+                            </tr>
+                        </div>
+                        <div class="col-md-6">
+                        <a href="{{ route('show', $user->id) }}"><i class="btn btn-warning">X</i></a>
+                        <form action="{{ route('delete', $user->id) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">X</button>
+                        </form> 
+                        </div> 
+                    </div>
                 </div>
                 @endforeach
             </div>

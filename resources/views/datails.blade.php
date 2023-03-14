@@ -1,12 +1,16 @@
 @extends('layouts.main')
-@section('title','Detalhes')
+@section('title', $user->name)
 @section('content')
     <div class="container">
         <div class="row">
             <div class="card col-md-12">
-                <div class="cord-body">
+                <div class="card-body">
                     <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius asperiores quas quia repellat, esse, ducimus illum quisquam quo corrupti voluptatibus enim quaerat ab provident doloribus expedita possimus modi qui amet.</p>
+                    <p>{{ $user->name }}</p>
+                    <p>{{ $user->cpf }}</p>
+                    <p>{{ $user->email }}</p>
+                    <p>{{ $user->phone }}</p>
+                    <p>{{ $user->street }}</p>
                 </div>
             </div>
         </div>
