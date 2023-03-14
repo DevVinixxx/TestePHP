@@ -8,7 +8,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="cpf" class="form-label">CPF: </label>
-                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="123.123.123-23">
+                   <!-- <input type="text" id="cpf" name="cpf" class="form-control" placeholder="123.123.123-23">-->
+                   <input type="number" class="form-control" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx">
                 </div>
                 <div class="mb-3 form-group">
                     <label for="birthdate" class="form-label">Data de nascimento: </label>
