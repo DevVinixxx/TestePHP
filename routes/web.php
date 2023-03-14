@@ -18,4 +18,12 @@ Route::get('/', [UserRegistrationController::class, 'index'])->name('index');
 
 Route::get('/create', [UserRegistrationController::class, 'create'])->name('create');
 
-Route::get('/update', [UserRegistrationController::class, 'update']);
+Route::get('/details/{id?}', [UserRegistrationController::class, 'details'])->name('details');
+
+Route::post('/store', [UserRegistrationController::class, 'store'])->name('store');
+
+Route::delete('/delete/{id}', [UserRegistrationController::class, 'destroy'])->name('delete');
+
+Route::get('/edit/{id}', [UserRegistrationController::class, 'edit'])->name('show');
+
+Route::put('/update/{id}', [UserRegistrationController::class, 'update'])->name('update');
